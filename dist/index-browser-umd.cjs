@@ -793,7 +793,7 @@
       } finally {
         _iterator.f();
       }
-    } else if (!literalPriority && val && hasOwnProp.call(val, loc)) {
+    } else if (!literalPriority && val) {
       addRet(this._trace(x, val[loc], push(path, loc), val, loc, callback, hasArrExpr, true));
     } // We check the resulting values for parent selections. For parent
     // selections we discard the value object and continue the trace with the

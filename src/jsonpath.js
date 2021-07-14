@@ -499,9 +499,7 @@ JSONPath.prototype._trace = function (
             ));
         }
     // simple case--directly follow property
-    } else if (
-        !literalPriority && val && hasOwnProp.call(val, loc)
-    ) {
+    } else if (!literalPriority && val) {
         addRet(
             this._trace(x, val[loc], push(path, loc), val, loc, callback,
                 hasArrExpr, true)
